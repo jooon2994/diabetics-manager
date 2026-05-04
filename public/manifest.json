@@ -1,0 +1,14 @@
+{
+  "name": "Ahadu Glucose Tracker",
+  "short_name": "Ahadu Glucose",
+  "description": "Personal diabetes blood glucose management",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#085041",
+  "theme_color": "#085041",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
