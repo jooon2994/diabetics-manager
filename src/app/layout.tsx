@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description: 'Personal diabetes blood glucose management app',
   manifest: '/manifest.json',
   appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'Ahadu Glucose' },
+  icons: {
+    apple: '/apple-touch-icon.png',
+    icon: '/icon-192.png',
+  }
 }
 
 export const viewport: Viewport = {
@@ -16,9 +20,6 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="apple-touch-icon" href="/icon-192.png" />
-      </head>
       <body>{children}</body>
     </html>
   )

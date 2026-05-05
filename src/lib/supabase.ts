@@ -43,19 +43,15 @@ export function getUserId(): string {
   return uid
 }
 
-// Lazy client - only created on the browser, never at build time
+// Singleton - only one instance ever created
 let _client: SupabaseClient | null = null
 
-export function getSupabase(): SupabaseClient {
+export function getDB(): SupabaseClient {
   if (_client) return _client
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-  if (!url || !key) throw new Error('Supabase env vars not configured')
-  _client = createClient(url, key)
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  _client = createClient(url, key, {
+    auth: { persistSession: true, autoRefreshToken: false }
+  })
   return _client
-}
-
-// Keep named export for compatibility
-export const supabase = {
-  from: (table: string) => getSupabase().from(table)
 }
