@@ -259,6 +259,14 @@ export default function App() {
     await loadData(userId)
   }
 
+  const askQuestion = async () => {
+    if (!askQ.trim()) return
+    setAskLoading(true)
+    const txt = await fetchAI(readings, askQ)
+    setAskAns(txt)
+    setAskLoading(false)
+  }
+
   const triggerAI = async (r: Reading[]) => {
     setAiLoading(true)
     setAiText(await fetchAI(r))
