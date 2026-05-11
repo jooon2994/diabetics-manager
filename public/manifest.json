@@ -1,6 +1,6 @@
 {
-  "name": "Ahadu Glucose Tracker",
-  "short_name": "Ahadu Glucose",
+  "name": "My Diabetes Manager",
+  "short_name": "Diabetes Mgr",
   "description": "Personal diabetes blood glucose management",
   "start_url": "/",
   "display": "standalone",
