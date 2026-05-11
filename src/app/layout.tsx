@@ -2,14 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ahadu Glucose Tracker',
-  description: 'Personal diabetes blood glucose management app',
+  title: 'My Diabetes Manager',
+  description: 'Personal diabetes blood glucose management app by John',
   manifest: '/manifest.json',
-  appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'Ahadu Glucose' },
-  icons: {
-    apple: '/apple-touch-icon.png',
-    icon: '/icon-192.png',
-  }
+  appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'My Diabetes Manager' },
+  icons: { apple: '/apple-touch-icon.png', icon: '/icon-192.png' }
 }
 
 export const viewport: Viewport = {
